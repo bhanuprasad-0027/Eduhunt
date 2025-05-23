@@ -1,0 +1,168 @@
+/* Reset default margins and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 6rem 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  color: var(--primary);
+  font-weight: 800;
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0, 77, 64, 0.1);
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--secondary);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.main {
+  background-color: var(--surface);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 150, 136, 0.15);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.hero {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: var(--primary);
+  margin: 1rem 0;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.featureCard {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  width: calc(33.333% - 2rem);
+  min-width: 250px;
+  flex-grow: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconWrapper {
+  background: var(--secondary);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: var(--text-light);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 150, 136, 0.3);
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  box-shadow: 0 6px 20px rgba(0, 150, 136, 0.4);
+}
+
+@media (max-width: 992px) {
+  .featureCard {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 5rem 1rem 2rem;
+  }
+  
+  .main {
+    padding: 2rem 1.5rem;
+    width: 95%;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .cardContainer {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .featureCard {
+    width: 100%;
+    min-width: 0;
+  }
+  
+  .container {
+    padding: 4.5rem 0.75rem 1.5rem;
+  }
+  
+  .main {
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+}
